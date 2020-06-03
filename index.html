@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Multiplos e Primos</title>
+    </head>
+    <body>
+        <h1> multiplos e Primos</h1>
+    </body>
+    <!-- algoritmo -->
+    <script>
+        /*
+            Autor: Francisco Daniel
+            Criação: 03/06/20
+            version: 1.0
+            descrição: Encontra multiplos de 3 e 5 e os numeros primos
+        */
+        for (let index = 0; index < 100; index++) {
+            multiplos(index);
+            primo(index);
+        }
+
+        function multiplos(valor){
+            var resto3 = valor % 3;
+            var resto5 = valor % 5;
+
+            if( resto3 == 0 && resto5 == 0){
+                console.log("Itelios, part of Capgemini " + valor);
+
+            }else if(resto3 == 0){
+                console.log("Itelios :" + valor + "\n");
+            }else if(resto5 == 0){
+                console.log("Capgemini :" + valor + "\n");
+            }
+        }
+
+        function primo(valor){
+            var teste = true;
+
+            if(valor > 1){
+                for (let index = 2; index < valor; index++){
+                    if(valor % index == 0){
+                        teste = false;
+                    }
+                }
+                if(teste != false){
+                    console.log("Número primo :"+ valor + "\n");
+                }
+            }
+
+        }
+    </script>
+</html>
