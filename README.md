@@ -1,2 +1,2 @@
 ## Desafío de Código 1
-todo o algoritmo está em um script no html
+todo o algoritmo está em um script no index.html
